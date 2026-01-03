@@ -3,38 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <title>Amit Rangra</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Notes on systems, identity, security, software, and clear thinking." />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Amit Rangra" />
-  <meta property="og:description" content="Systems, IAM, software, and thinking clearly." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://amitrangra.com" />
+  <meta name="description" content="Systems, identity, security, software, and playful thinking." />
 
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <main class="scene">
+  <main class="scene" id="scene">
     <div class="background"></div>
 
-    <div class="card" id="card">
-      <h1>Amit Rangra</h1>
+    <section class="desk">
 
-      <p class="subtitle">
-        Systems · Identity · Security · Software
-      </p>
+      <!-- Identity -->
+      <div class="card identity">
+        <h1>Amit Rangra</h1>
+        <p class="subtitle">Systems · Identity · Security · Software</p>
+        <p class="description">
+          I explore how complex systems behave — technically and philosophically.
+        </p>
+        <a href="https://notes.amitrangra.com" class="cta">→ Read the notes</a>
+      </div>
 
-      <p class="description">
-        I explore how complex systems behave — technically and philosophically.
-      </p>
+      <!-- Notes -->
+      <div class="card notes">
+        <h2>Notes</h2>
+        <p>
+          Short essays on IAM, backend systems, automation, and decision-making.
+        </p>
+        <a href="https://notes.amitrangra.com">Browse →</a>
+      </div>
 
-      <a class="cta" href="https://notes.amitrangra.com">
-        → Read the notes
-      </a>
-    </div>
+      <!-- Game -->
+      <div class="card game">
+        <h2>Play</h2>
+        <div class="board" id="board"></div>
+        <p class="hint">You vs yourself. X always starts.</p>
+      </div>
+
+    </section>
   </main>
 
   <script src="script.js"></script>
