@@ -1,0 +1,91 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* Scene */
+.scene {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background texture */
+.background {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, #e2e8f0 1px, transparent 1px),
+    radial-gradient(circle at 80% 40%, #e2e8f0 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.4;
+  transform: translateZ(-200px);
+}
+
+/* Card */
+.card {
+  background: white;
+  padding: 2.8rem 3rem;
+  border-radius: 18px;
+  max-width: 460px;
+  text-align: center;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.08),
+    0 30px 60px rgba(0, 0, 0, 0.05);
+
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Typography */
+.card h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.description {
+  margin: 1.4rem 0 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #334155;
+}
+
+/* CTA */
+.cta {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  color: #2563eb;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.cta:hover {
+  border-color: #2563eb;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+}
