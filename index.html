@@ -2,47 +2,177 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Amit Rangra</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Systems, identity, security, software, and playful thinking." />
+  <title>Amit Rangra</title>
+  <meta name="description" content="Amit Rangra — systems, identity, and security engineer. I build systems that have to prove who they are before anyone trusts them." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
-  <main class="scene" id="scene">
-    <div class="background"></div>
+<body id="top">
 
-    <section class="desk">
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="#top">amit<span class="tilde">@</span>rangra<span class="tilde">:~$</span></a>
+      <nav class="navlinks">
+        <a class="hideable" href="#story">story</a>
+        <a class="hideable" href="#focus">focus</a>
+        <a class="hideable" href="#work">work</a>
+        <a href="https://notes.amitrangra.com">notes ↗</a>
+        <a href="https://github.com/amitrangra-labs">github ↗</a>
+      </nav>
+    </div>
+  </header>
 
-      <!-- Identity -->
-      <div class="card identity">
-        <h1>Amit Rangra</h1>
-        <p class="subtitle">Systems · Identity · Security · Software</p>
-        <p class="description">
-          I explore how complex systems behave — technically and philosophically.
-        </p>
-        <a href="https://notes.amitrangra.com" class="cta">→ Read the notes</a>
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="term">
+          <div class="term__bar">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="term__title">amit@systems — zsh — 96×32</span>
+          </div>
+          <div class="term__body">
+            <div class="prompt"><span class="sig">$</span> whoami</div>
+            <h1>Amit&nbsp;Rangra</h1>
+            <div class="roles">
+              <b>systems</b><span class="sep">·</span><b>identity</b><span class="sep">·</span><b>security</b><span class="sep">·</span><b>software</b>
+            </div>
+
+            <div class="prompt" style="margin-top:34px;"><span class="amb">$</span> cat thesis.txt</div>
+            <p class="thesis">I build systems that have to <span class="hl">prove who they are</span> before anyone trusts them — and I'm drawn to how they behave, technically and philosophically, when the guarantees are put under pressure.<span class="cursor"></span></p>
+
+            <div class="cta-row">
+              <a class="btn primary" href="https://notes.amitrangra.com">Read the notes <span class="arw">→</span></a>
+              <a class="btn ghost" href="https://github.com/amitrangra-labs">$ git clone github.com/amitrangra-labs</a>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <!-- Notes -->
-      <div class="card notes">
-        <h2>Notes</h2>
-        <p>
-          Short essays on IAM, backend systems, automation, and decision-making.
-        </p>
-        <a href="https://notes.amitrangra.com">Browse →</a>
-      </div>
-
-      <!-- Game -->
-      <div class="card game">
-        <h2>Play</h2>
-        <div class="board" id="board"></div>
-        <p class="hint">You vs yourself. X always starts.</p>
-      </div>
-
     </section>
+
+    <!-- STORY -->
+    <section class="story" id="story">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">$ cat story.md</span>
+          <h2>How I think about systems</h2>
+        </div>
+        <div class="story-grid">
+          <p><span class="lead">// the interesting part is the boundary</span>Most of what I find fascinating in engineering lives at the edges — the moment one system decides whether to <strong>trust</strong> another. Identity, authorization, the handshake before the real work begins. Get the boundary right and everything behind it can stay simple. Get it wrong and no amount of cleverness downstream will save you.</p>
+
+          <p class="pull">A system you can reason about is worth more than a clever one you can only hope about.</p>
+
+          <p><span class="lead">// how I build</span>I build in small, verifiable pieces — <strong>hexagonal boundaries</strong>, explicit wiring, short-lived credentials over standing ones, and no hidden trust anywhere in the graph. I'd rather a design fail loudly at the seam than quietly three layers deep. The projects below are where I test those ideas against real constraints.</p>
+
+          <p><span class="lead">// and the philosophical part</span>Systems and the people who run them behave in surprisingly similar ways under pressure — both make decisions with incomplete information, both accrue debt, both fail in the gap between what was assumed and what was true. That overlap is what I write about in the <a class="inline-amb" href="https://notes.amitrangra.com">notes</a>, and it's why the work never feels purely technical to me.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOCUS -->
+    <section class="focus-sec" id="focus">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">$ ls ./focus</span>
+          <h2>Four things I keep returning to</h2>
+        </div>
+        <div class="focus-grid">
+          <div class="focus">
+            <div class="idx">01 / systems</div>
+            <h3>Systems</h3>
+            <p>Distributed services, Kubernetes, and the operational reality of keeping them honest under load.</p>
+          </div>
+          <div class="focus">
+            <div class="idx">02 / identity</div>
+            <h3>Identity</h3>
+            <p>Workload and agent identity — SPIFFE, federation, and short-lived, actor-scoped tokens.</p>
+          </div>
+          <div class="focus">
+            <div class="idx">03 / security</div>
+            <h3>Security</h3>
+            <p>Trust boundaries, least privilege, and inspecting what flows across them before it does harm.</p>
+          </div>
+          <div class="focus">
+            <div class="idx">04 / software</div>
+            <h3>Software</h3>
+            <p>Clean, testable backends — hexagonal architecture, explicit wiring, and code you can reason about.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="work" id="work">
+      <div class="wrap">
+        <div class="sec-head sec-head--row">
+          <div>
+            <span class="eyebrow">$ ./run --list-projects</span>
+            <h2>Selected work</h2>
+          </div>
+          <a class="btn ghost" href="https://github.com/amitrangra-labs">All repositories →</a>
+        </div>
+
+        <div class="work-grid">
+          <a class="card" href="https://github.com/amitrangra-labs">
+            <div class="card__top"><span class="tag">identity · ai</span><span class="card__go">↗</span></div>
+            <h3>agent-identity-plane</h3>
+            <p>A broker that mints short-lived, actor-scoped tokens for AI agents — no stored refresh tokens — layered on federated workload identity in Kubernetes.</p>
+            <div class="stack"><span class="chip">SPIFFE</span><span class="chip">Kubernetes</span><span class="chip">OAuth</span><span class="chip">Java</span></div>
+          </a>
+
+          <a class="card" href="https://github.com/amitrangra-labs">
+            <div class="card__top"><span class="tag">security · ai</span><span class="card__go">↗</span></div>
+            <h3>prompt-sentinel</h3>
+            <p>A prompt firewall for the Model Context Protocol — inspecting and filtering model-context traffic before it ever reaches a tool.</p>
+            <div class="stack"><span class="chip">Java</span><span class="chip">MCP</span><span class="chip">Security</span></div>
+          </a>
+
+          <a class="card" href="https://github.com/amitrangra-labs">
+            <div class="card__top"><span class="tag">systems · identity</span><span class="card__go">↗</span></div>
+            <h3>restaurant-ops-platform</h3>
+            <p>SPIFFE-federated Kubernetes microservices for restaurant operations — a testbed for zero-trust service identity done end to end.</p>
+            <div class="stack"><span class="chip">Kubernetes</span><span class="chip">SPIFFE</span><span class="chip">jOOQ</span><span class="chip">Testcontainers</span></div>
+          </a>
+
+          <a class="card" href="https://github.com/amitrangra-labs">
+            <div class="card__top"><span class="tag">software · backend</span><span class="card__go">↗</span></div>
+            <h3>stock-insights</h3>
+            <p>A market-insights backend built on strict hexagonal architecture — ports, adapters, and explicit wiring taken seriously.</p>
+            <div class="stack"><span class="chip">Java</span><span class="chip">Spring</span><span class="chip">Hexagonal</span></div>
+          </a>
+
+          <a class="card card--wide" href="https://github.com/amitrangra-labs">
+            <div class="card__top"><span class="tag">software · impact</span><span class="card__go">↗</span></div>
+            <h3>coursecraft</h3>
+            <p>A nonprofit education platform, Android-first, built on a deliberately zero-cost stack — Supabase and YouTube Live — so learning ships without a budget in the way.</p>
+            <div class="stack"><span class="chip">Android</span><span class="chip">Supabase</span><span class="chip">YouTube Live</span><span class="chip">Nonprofit</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
+
+  <footer>
+    <div class="wrap">
+      <p class="foot-cta">Building systems that <span class="hl">earn</span> their trust.</p>
+      <div class="foot-links">
+        <a class="btn primary" href="https://notes.amitrangra.com">Read the notes →</a>
+        <a class="btn ghost" href="https://github.com/amitrangra-labs">GitHub ↗</a>
+      </div>
+      <div class="foot-meta">
+        <span>© <span id="yr">2026</span> Amit Rangra</span>
+        <span><span class="sig">$</span> uptime — systems · identity · security · software</span>
+      </div>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
