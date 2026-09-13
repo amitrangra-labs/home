@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
 
-  <link rel="stylesheet" href="style.css?v=2" />
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
 
 <body id="top">
@@ -120,40 +120,59 @@
         </div>
 
         <div class="work-grid">
-          <a class="card" href="https://github.com/amitrangra-labs">
-            <div class="card__top"><span class="tag">identity · ai</span><span class="card__go">↗</span></div>
-            <h3>agent-identity-plane</h3>
-            <p>A broker that mints short-lived, actor-scoped tokens for AI agents — no stored refresh tokens — layered on federated workload identity in Kubernetes.</p>
-            <div class="stack"><span class="chip">SPIFFE</span><span class="chip">Kubernetes</span><span class="chip">OAuth</span><span class="chip">Java</span></div>
+          <a class="card" href="https://github.com/amitrangra-labs/federated-workload-identity-k8s">
+            <div class="card__top"><span class="tag">identity · infra</span><span class="card__go">↗</span></div>
+            <h3>federated-workload-identity-k8s</h3>
+            <p>Federated SPIFFE/SPIRE workload identity on Kubernetes — JDK 26 services authenticate to each other with short-lived JWT-SVIDs across two federated trust domains. No static credentials, anywhere.</p>
+            <div class="stack"><span class="chip">SPIFFE</span><span class="chip">SPIRE</span><span class="chip">Kubernetes</span><span class="chip">JDK 26</span></div>
           </a>
 
-          <a class="card" href="https://github.com/amitrangra-labs">
+          <a class="card" href="https://github.com/amitrangra-labs/prompt-sentinel">
             <div class="card__top"><span class="tag">security · ai</span><span class="card__go">↗</span></div>
             <h3>prompt-sentinel</h3>
             <p>A prompt firewall for the Model Context Protocol — inspecting and filtering model-context traffic before it ever reaches a tool.</p>
             <div class="stack"><span class="chip">Java</span><span class="chip">MCP</span><span class="chip">Security</span></div>
           </a>
 
-          <a class="card" href="https://github.com/amitrangra-labs">
-            <div class="card__top"><span class="tag">systems · identity</span><span class="card__go">↗</span></div>
-            <h3>restaurant-ops-platform</h3>
-            <p>SPIFFE-federated Kubernetes microservices for restaurant operations — a testbed for zero-trust service identity done end to end.</p>
-            <div class="stack"><span class="chip">Kubernetes</span><span class="chip">SPIFFE</span><span class="chip">jOOQ</span><span class="chip">Testcontainers</span></div>
-          </a>
-
-          <a class="card" href="https://github.com/amitrangra-labs">
+          <a class="card" href="https://github.com/amitrangra-labs/stock-insights">
             <div class="card__top"><span class="tag">software · backend</span><span class="card__go">↗</span></div>
             <h3>stock-insights</h3>
-            <p>A market-insights backend built on strict hexagonal architecture — ports, adapters, and explicit wiring taken seriously.</p>
-            <div class="stack"><span class="chip">Java</span><span class="chip">Spring</span><span class="chip">Hexagonal</span></div>
+            <p>Per-stock insights — fundamentals, estimates, analyst ratings, news, price history — for a curated set of tickers. Spring Boot + Thymeleaf on a strict hexagonal domain/port/adapter core.</p>
+            <div class="stack"><span class="chip">Spring Boot</span><span class="chip">Thymeleaf</span><span class="chip">Hexagonal</span></div>
           </a>
 
-          <a class="card card--wide" href="https://github.com/amitrangra-labs">
+          <a class="card" href="https://github.com/amitrangra-labs/coursecraft">
             <div class="card__top"><span class="tag">software · impact</span><span class="card__go">↗</span></div>
             <h3>coursecraft</h3>
-            <p>A nonprofit education platform, Android-first, built on a deliberately zero-cost stack — Supabase and YouTube Live — so learning ships without a budget in the way.</p>
-            <div class="stack"><span class="chip">Android</span><span class="chip">Supabase</span><span class="chip">YouTube Live</span><span class="chip">Nonprofit</span></div>
+            <p>An Android-first education platform — video lectures with saved progress, auto-graded assessments, and leaderboards — engineered to run at $0 on Supabase and free video.</p>
+            <div class="stack"><span class="chip">Android</span><span class="chip">Supabase</span><span class="chip">$0 stack</span></div>
           </a>
+        </div>
+
+        <div class="more">
+          <span class="eyebrow more__eyebrow">$ ls ./more</span>
+          <div class="more-grid">
+            <a class="more-item" href="https://github.com/amitrangra/two-way-tls">
+              <span class="more-name">two-way-tls</span>
+              <span class="more-desc">Mutual TLS for REST APIs</span>
+              <span class="more-go">↗</span>
+            </a>
+            <a class="more-item" href="https://github.com/amitrangra/access-control">
+              <span class="more-name">access-control</span>
+              <span class="more-desc">Access-control &amp; authorization patterns</span>
+              <span class="more-go">↗</span>
+            </a>
+            <a class="more-item" href="https://github.com/amitrangra/email-login">
+              <span class="more-name">email-login</span>
+              <span class="more-desc">Email-based login flow in Java</span>
+              <span class="more-go">↗</span>
+            </a>
+            <a class="more-item" href="https://github.com/amitrangra/springboot-flyway-jooq-postgres">
+              <span class="more-name">springboot-flyway-jooq-postgres</span>
+              <span class="more-desc">Spring Boot · Flyway · jOOQ · Postgres reference stack</span>
+              <span class="more-go">↗</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -174,6 +193,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>
