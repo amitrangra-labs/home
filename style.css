@@ -124,6 +124,11 @@ h1,h2,h3{ font-family: var(--font-display); text-wrap: balance; letter-spacing: 
 .roles b{ color: var(--text); font-weight: 500; }
 .roles .sep{ color: var(--cyan); }
 
+.bio{ margin-top: 20px; display: flex; flex-direction: column; gap: 5px; }
+.bio-role{ font-family: var(--font-display); font-size: clamp(16px, 2.6vw, 19px); font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
+.bio-at{ color: var(--cyan); }
+.bio-meta{ font-family: var(--font-mono); font-size: 13px; line-height: 1.5; color: var(--text-dim); letter-spacing: .01em; }
+
 .thesis{
   margin: 30px 0 0;
   font-size: clamp(19px, 3vw, 24px);
